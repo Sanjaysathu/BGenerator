@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .header{
+        text-align: center;
+        padding-top: 50px;
+    }
+    .header>div{
+        font-size: 40px;
+        letter-spacing: 15px;
+        padding-bottom: 60px;
+    }
+    #first,#second{
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="header">
+        <div>BACKGROUND GENERATOR</div>
+        <input type="color" name="" id="first" onchange="disp()">
+        <input type="color" name="" id="second" onchange="disp()"> 
+        <h3 id="display" style="color: white;"></h3>
+    </div>
+    <script>
+    function disp(){  
+        var a=document.getElementById("first").value;
+        var b=document.getElementById("second").value;
+        console.log(a,b);
+        document.body.style.background="linear-gradient(to right, "+a+", "+b+")";
+        var c = document.getElementById("display");
+        c.innerText = "linear-gradient(to right, "+a+", "+b+")";
+    }
+    </script>
+</body>
+</html>
